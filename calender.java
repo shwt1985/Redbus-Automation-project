@@ -1,4 +1,5 @@
-package common_pkg;
+package CommonMethod;
+
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -52,3 +53,4 @@ public class calender {
 		}
 	}
 }
+
