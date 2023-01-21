@@ -1,4 +1,5 @@
-package common_pkg;
+package Common_pkg;
+
 import java.time.Duration;
 import java.util.List;
 
@@ -9,7 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class wait {
-    
 	public static void implicit(WebDriver Driver,int sec) {
 		Driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
 	}
@@ -38,4 +38,17 @@ public class wait {
 	    WebElement clickable = wait.exp_obj(Driver).until(ExpectedConditions.elementToBeClickable(locator));
 	    return clickable;
 	}
+	
+	public static void clickable_bus(WebDriver driver,By locator) {
+		wait.exp_obj(driver).until(ExpectedConditions.elementToBeClickable(locator)).click();
+		System.out.println("hello friends");
+		
+	}
+	
+	public static void view_seats(WebDriver driver,By locator,By popclose) {
+	
+		wait.exp_obj(driver).until(ExpectedConditions.elementToBeClickable(locator)).click();
+		wait.exp_obj(driver).until(ExpectedConditions.elementToBeClickable(popclose)).click();
+	}
 }
+
