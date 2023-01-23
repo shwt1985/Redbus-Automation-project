@@ -26,14 +26,14 @@ public class sortbyPrice extends browser {
 	}
 	
 	public void scroll() throws InterruptedException, IOException {
-		/*JavascriptExecutor js = (JavascriptExecutor) driver;
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		int i=0;
 		while(i<5) {
 			js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 			i++;
-		}*/
+		}
 		
-		utility.full_screenshot(driver, "sortByFare");
+		//utility.full_screenshot(driver, "sortByFare");
 	}
 	
 	public void fareAscending() {

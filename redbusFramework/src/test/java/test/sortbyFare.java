@@ -32,8 +32,8 @@ public class sortbyFare extends browser{
 	@Test(priority=2)
 	public void availableBus() throws InterruptedException, IOException {
 		page2.fareButton();
-		//page2.scroll();
-		utility.full_screenshot(driver, "sortByPrice");
+		page2.scroll();
+		//utility.full_screenshot(driver, "sortByPrice");
 		page2.fareAscending();
 		//utility.takeScreenShot(driver, "sortPrice");
 	}
