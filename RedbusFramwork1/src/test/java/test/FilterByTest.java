@@ -18,10 +18,10 @@ public class FilterByTest extends browser{
 	@BeforeTest
 	public void setupTest() throws Throwable {
 		setup();
-		impWait();	
-		 act=new search();
-		 util=new Utility();
-		 filter=new FilterByNonAC();
+	//	impWait();	
+		act=new search();
+		util=new Utility();
+		filter=new FilterByNonAC();
 		
 	}
 	@Test(priority=1)

@@ -48,12 +48,14 @@ public class search extends browser {
 	}
 
 	public void fromCity() throws InterruptedException {
+		waitForWebElementToAppear(searchBoxFrom);
 		searchBoxFrom.sendKeys(From);
-		Thread.sleep(2000);
+		waitForWebElementsToAppear(fromCitiesclick);
 		int count = fromCitiesclick.size();
 		System.out.println(count);
 		Thread.sleep(2000);
 		for (int i = 0; i < count; i++) {
+			waitForWebElementsToAppear(fromCitiesText);
 			String foundValue = fromCitiesText.get(i).getText();
 			System.out.println(foundValue);
 			if (foundValue.contains(reqSource)) {
@@ -67,12 +69,10 @@ public class search extends browser {
 	}
 
 	public void toCity() throws InterruptedException {
-
+		waitForWebElementToAppear(searchBoxTo);		
 		searchBoxTo.sendKeys(To);
-		Thread.sleep(2000);
-
 		for (int i = 0; i < toCityText.size(); i++) {
-			Thread.sleep(2000);
+			waitForWebElementsToAppear(toCityText);	
 			String getValue = toCityText.get(i).getText();
 			System.out.println(getValue);
 
@@ -92,14 +92,17 @@ public class search extends browser {
 
 		// Step10:Extract the required month & year by clicking on next button
 		while (true) {
+			waitForWebElementToAppear(monthTitle);
 			String month_year = monthTitle.getText();
 
 			if (month_year.equalsIgnoreCase(month_yr))
 				break;
 			else
+				waitForWebElementToAppear(nextButton);
 				nextButton.click();
 		}
 		// Step11: capture the list of date
+		waitForWebElementsToAppear(dates1);
 		int count = dates1.size();
 		// Step12:validate the date & click/select
 		for (int i = 0; i < count; i++) {
@@ -110,17 +113,14 @@ public class search extends browser {
 				break;
 			}
 		}
-
 	}
 
 	public void availableBus() throws InterruptedException {
 		// Step13:Serch the available bus
-		Thread.sleep(2000);
+		waitForWebElementToAppear(searchButton);
 		searchButton.click();
-
 		// Verify that search results are displayed correctly
 		String expectedTitle = "Book Bus Travels, AC Volvo Bus, rPool & Bus Hire - redBus India";
-
 		String actualTitle = driver.getTitle();
 		Thread.sleep(3000);
 		System.out.println(actualTitle);		
@@ -130,7 +130,4 @@ public class search extends browser {
 			System.out.println("Test Failed");
 		}
 	}
-
-
-
 }

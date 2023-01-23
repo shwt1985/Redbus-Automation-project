@@ -8,67 +8,31 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">80,734</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">TestLinks</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">164,282</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">TestSearch</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">124,547</td><td></td><td></td></tr>
+<tr><td><a href="#t2">TestSortBy</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">79,190</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">TestFilterBy</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">48,723</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">14</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">416,742</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">test.FilterByTest</td><td><a href="#m0">filterByNonACType</a></td><td rowspan="1">1674448524650</td><td rowspan="1">56731</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">test.FilterByTest</td><td><a href="#m1">closeWindow</a></td><td rowspan="1">1674448581386</td><td rowspan="1">594</td></tr><tr class="passedeven"><td><a href="#m2">findBuses</a></td><td rowspan="1">1674448519516</td><td rowspan="1">5132</td></tr><tr class="passedeven"><td><a href="#m3">fromDropdown</a></td><td rowspan="1">1674448510291</td><td rowspan="1">9220</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestLinks &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">test.SearchBus</td><td><a href="#m0">closeWindow</a></td><td rowspan="1">1674493550287</td><td rowspan="1">258</td></tr><tr class="passedeven"><td><a href="#m1">findBuses</a></td><td rowspan="1">1674493425034</td><td rowspan="1">125251</td></tr><tr class="passedeven"><td><a href="#m2">fromDropdown</a></td><td rowspan="1">1674493415883</td><td rowspan="1">9148</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">TestSearch &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">test.LinkValidations</td><td><a href="#m3">availableFooterLinks</a></td><td rowspan="1">1674493643285</td><td rowspan="1">29</td></tr><tr class="passedeven"><td><a href="#m4">availableLinks</a></td><td rowspan="1">1674493643259</td><td rowspan="1">25</td></tr><tr class="passedeven"><td><a href="#m5">closeWindow</a></td><td rowspan="1">1674493674813</td><td rowspan="1">307</td></tr><tr class="passedeven"><td><a href="#m6">firstColumnLinksInFooter</a></td><td rowspan="1">1674493643315</td><td rowspan="1">31496</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">TestSortBy &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">test.SortBy</td><td><a href="#m7">FirstPage</a></td><td rowspan="1">1674493680034</td><td rowspan="1">53482</td></tr><tr class="passedeven"><td><a href="#m8">SortFare</a></td><td rowspan="1">1674493733517</td><td rowspan="1">20496</td></tr><tr class="passedeven"><td><a href="#m9">closeWindow</a></td><td rowspan="1">1674493754014</td><td rowspan="1">302</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">TestFilterBy &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">test.FilterByTest</td><td><a href="#m10">closeWindow</a></td><td rowspan="1">1674493802813</td><td rowspan="1">233</td></tr><tr class="passedeven"><td><a href="#m11">filterByNonACType</a></td><td rowspan="1">1674493787620</td><td rowspan="1">15192</td></tr><tr class="passedeven"><td><a href="#m12">findBuses</a></td><td rowspan="1">1674493782543</td><td rowspan="1">5073</td></tr><tr class="passedeven"><td><a href="#m13">fromDropdown</a></td><td rowspan="1">1674493773833</td><td rowspan="1">8709</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">test.FilterByTest#filterByNonACType</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;bt_NONAC&quot; class=&quot;custom-checkbox&quot;&gt;&lt;/label&gt; is not clickable at point (34, 621). Other element would receive the click: &lt;img src=&quot;/images/reviews/half-star-right.svg&quot; alt=&quot;&quot; class=&quot;half-star-left&quot;&gt;
-  (Session info: chrome=109.0.5414.75)
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fded89e605eb34ded373591b9d18e682, clickElement {id=ccb9c9d0-28bf-4076-b521-63aa60a6bab4}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\ACER\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54098}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54098/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (fded89e605eb34ded373591b9d18e682)] -&gt; xpath: //label[@for=&quot;bt_NONAC&quot; and @class=&quot;custom-checkbox&quot;]]
-Session ID: fded89e605eb34ded373591b9d18e682
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
-	at pages.FilterByNonAC.selectNonAC(FilterByNonAC.java:27)
-	at test.FilterByTest.filterByNonACType(FilterByTest.java:43)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">test.FilterByTest#closeWindow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">test.FilterByTest#findBuses</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">test.FilterByTest#fromDropdown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestLinks</h2><h3 id="m0">test.SearchBus#closeWindow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">test.SearchBus#findBuses</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">test.SearchBus#fromDropdown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestSearch</h2><h3 id="m3">test.LinkValidations#availableFooterLinks</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">test.LinkValidations#availableLinks</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">test.LinkValidations#closeWindow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">test.LinkValidations#firstColumnLinksInFooter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestSortBy</h2><h3 id="m7">test.SortBy#FirstPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">test.SortBy#SortFare</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">test.SortBy#closeWindow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestFilterBy</h2><h3 id="m10">test.FilterByTest#closeWindow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">test.FilterByTest#filterByNonACType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">test.FilterByTest#findBuses</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">test.FilterByTest#fromDropdown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

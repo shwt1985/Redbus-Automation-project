@@ -29,16 +29,14 @@ public class LinksPage extends browser{
 	public int totalLinks() {
 		
 		waitForWebElementsToAppear(allLinks);
-		return allLinks.size();
-		
+		return allLinks.size();		
 	}
 	
 	// count of link present in footer section
 	public int footerLinkCount() {	
 		
 		waitForWebElementToAppear(footerDriver);
-		return footerDriver.findElements(By.tagName("a")).size();
-		
+		return footerDriver.findElements(By.tagName("a")).size();		
 		
 	}	
 	// Count link present in 1st column of footer
@@ -66,10 +64,5 @@ public class LinksPage extends browser{
 			System.out.println("----------------------------------------------------");
 
 		}
-	}
-	
-	
-		
-
-	
+	}	
 }

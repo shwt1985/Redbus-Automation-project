@@ -14,14 +14,14 @@ public class LinkValidations extends browser {
 
 	LinksPage linkPage;
 	
-	@BeforeTest
+	@BeforeTest(groups="Sanity")
 	public void setupTest() throws Throwable {
 		setup();
-		impWait();	
+	//	impWait();	
 		linkPage=new LinksPage();
 		
 	}
-	@Test(priority=1)
+	@Test(priority=1,groups="Sanity")
 	public void availableLinks() throws IOException {
 		int expectedLink=120;
 		int actualLinks=linkPage.totalLinks();
@@ -29,7 +29,7 @@ public class LinkValidations extends browser {
 		
 	}
 
-	@Test(priority=2)
+	@Test(priority=2,groups="Sanity")
 	public void availableFooterLinks() throws IOException {
 		int expextedFooterLinks=28;
 		int actualFooterLinks=linkPage.footerLinkCount();
@@ -38,13 +38,13 @@ public class LinkValidations extends browser {
 	}
 	
 	
-	@Test(priority=3)
+	@Test(priority=3,groups="Sanity")
 	public void firstColumnLinksInFooter() throws InterruptedException, IOException {
 		linkPage.footerColumnLink();
 		
 	}
 	
-	@Test(priority=4)
+	@Test(priority=4,groups="Sanity")
 	public void closeWindow() {
 		close();
 	}

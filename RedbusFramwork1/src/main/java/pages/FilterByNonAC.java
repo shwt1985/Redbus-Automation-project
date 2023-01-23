@@ -22,7 +22,6 @@ public class FilterByNonAC extends browser{
 	@FindBy(xpath="//div[@id=\"single_seat_coachmark\"] //div[@class=\"gotIt\"]") WebElement p;
 	
 	public void selectNonAC() {
-
 		waitForWebElementToAppear(filterByCheckBox);
 		filterByCheckBox.click();
 	}
@@ -37,17 +36,13 @@ public class FilterByNonAC extends browser{
 			String[] info2=info1.split("S");
 			String info=info2[0].trim();
 			
-			if(info.contains("NON A/C"))
+			if(info.equalsIgnoreCase("NON A/C"))
 			{
 				System.out.println(i+"No. bus is type - "+info);
 			}
 			else {
 				System.out.println("Filter not work Test fails");
 			}
-		}
-		
+		}		
 	}
-	
-	
-
 }

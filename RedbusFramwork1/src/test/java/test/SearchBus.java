@@ -21,16 +21,16 @@ public class SearchBus extends browser{
 	search act;
 	Utility util=new Utility();
 	
-	@BeforeTest
+	@BeforeTest(groups = {"Sanity","Regression"})
 	public void setupTest() throws Throwable {
 		setup();
-		impWait();	
+	//	impWait();	
 		act=new search();
 		
 	}
 
 	
-	@Test(priority=1)
+	@Test(priority=1,groups = {"Sanity","Regression"})
 	public void fromDropdown() throws InterruptedException, IOException{
 		
 		act.fromCity();
@@ -40,7 +40,7 @@ public class SearchBus extends browser{
 		
 	}
 	
-	@Test(priority=2)
+	@Test(priority=2,groups = {"Sanity","Regression"})
 	public void findBuses() throws InterruptedException, IOException {		
 		act.availableBus();
 		util.full_screenshot(driver, "AvailableBus");
@@ -48,7 +48,7 @@ public class SearchBus extends browser{
 	}
 	
 	
-	@Test(priority=3)
+	@Test(priority=3,groups = {"Sanity","Regression"})
 	public void closeWindow() {
 		close();
 	}
