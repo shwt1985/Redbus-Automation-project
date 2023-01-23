@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-22T21:22:29 IST" name="Default suite" finished-at="2023-01-22T21:24:00 IST" duration-ms="90320">
+  <suite started-at="2023-01-23T22:55:36 IST" name="Default suite" finished-at="2023-01-23T22:56:41 IST" duration-ms="65977">
     <groups>
     </groups>
-    <test started-at="2023-01-22T21:22:29 IST" name="Default test" finished-at="2023-01-22T21:24:00 IST" duration-ms="90320">
-      <class name="test.sortbyFare">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:test.sortbyFare@506ae4d4]" started-at="2023-01-22T21:22:29 IST" name="initialization" finished-at="2023-01-22T21:22:58 IST" duration-ms="28908" status="PASS">
+    <test started-at="2023-01-23T22:55:36 IST" name="Default test" finished-at="2023-01-23T22:56:41 IST" duration-ms="65977">
+      <class name="test.searchBus$sortbyFare">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:test.searchBus$sortbyFare@53aac487]" started-at="2023-01-23T22:55:36 IST" name="initialization" finished-at="2023-01-23T22:56:01 IST" duration-ms="24993" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="fromCity()[pri:1, instance:test.sortbyFare@506ae4d4]" started-at="2023-01-22T21:22:59 IST" name="fromCity" finished-at="2023-01-22T21:23:53 IST" duration-ms="54237" status="PASS">
+        <test-method signature="fromCity()[pri:1, instance:test.searchBus$sortbyFare@53aac487]" started-at="2023-01-23T22:56:01 IST" name="fromCity" finished-at="2023-01-23T22:56:21 IST" duration-ms="20796" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fromCity -->
-        <test-method signature="availableBus()[pri:2, instance:test.sortbyFare@506ae4d4]" started-at="2023-01-22T21:23:53 IST" name="availableBus" finished-at="2023-01-22T21:23:59 IST" duration-ms="6522" status="PASS">
+        <test-method signature="quitBrowser()[pri:2, instance:test.searchBus$sortbyFare@53aac487]" started-at="2023-01-23T22:56:21 IST" name="quitBrowser" finished-at="2023-01-23T22:56:41 IST" duration-ms="20008" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- availableBus -->
-      </class> <!-- test.sortbyFare -->
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- test.searchBus$sortbyFare -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

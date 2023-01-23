@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 import java.util.Properties;
 
 import javax.imageio.ImageIO;
@@ -28,24 +29,25 @@ public class browser {
 
 		String browser = readPropertyFile("browser");
 
-		if (browser.equalsIgnoreCase("chrome")) 
-		{
+		switch (browser) {
+		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
-		} 
-		else if (browser.equalsIgnoreCase("edge")) 
-		{
-			System.setProperty("webdriver.edge.driver", "C:\\Drivers\\chromedriver.exe");
-			driver = new EdgeDriver();
-		} 
-		else if (browser.equalsIgnoreCase("firefox")) 
-		{
-			System.setProperty("webdriver.edge.driver", "C:\\Drivers\\chromedriver.exe");
+			break;
+
+		case "firefox":
+			System.setProperty("webdriver.firefox.driver", "C:\\Drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
-		} 
-		else 
-		{
-			System.out.println("Invalid Browser");
+			break;
+
+		case "edge":
+			System.setProperty("webdriver.edge.driver", "C:\\Drivers\\msedgedriver.exe");
+			driver = new EdgeDriver();
+			break;
+
+		default:
+			System.out.println(browser + " is incorrect, Please select correct browser name");
+			break;
 		}
 
 		driver.get(readPropertyFile("url"));
@@ -54,35 +56,38 @@ public class browser {
 
 	}
 
-	public void impWait() 
-	{
+	public void impWait() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
-	public String readPropertyFile(String value) throws Throwable 
-	{
+	public String readPropertyFile(String value) throws Throwable {
 		Properties prop = new Properties();
 		FileInputStream file = new FileInputStream("C:\\Users\\vishal\\eclipse-workspace\\redbusFramework\\properties");
 		prop.load(file);
 		return prop.getProperty(value);
 	}
 
-	public void waitForElementToAppear(By findBy) 
-	{
+	public void waitForElementToAppear(By findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 	}
 
-	public void waitForWebElementToAppear(WebElement findBy) 
-	{
+	public void waitForWebElementElementsToAppear(List<WebElement> findBy) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfAllElements(findBy));
+	}
+
+	public void waitForWebElementToAppear(WebElement findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 
-	public void close() 
-	{
+	public void closePage() {
 		driver.close();
 		System.out.println("Run Finished");
 	}
 
+	public void quit() {
+		driver.quit();
+	}
 }
